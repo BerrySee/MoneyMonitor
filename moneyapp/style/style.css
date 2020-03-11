@@ -9,6 +9,7 @@ body {
 
 /*Header with flexbox (for navbar)*/
 header {
+  padding: 0.5em;
   color: white;
   height: 4em;
   background: #70a300;
@@ -40,12 +41,12 @@ header nav .nav__links li a {
   font-size: 20px;
   color: white;
   text-decoration: none;
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
 }
 
 header nav .nav__links li a:hover {
-  color: yellow;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  color: black;
 }
 
 section {

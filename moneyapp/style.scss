@@ -7,6 +7,7 @@ body {
 }
 /*Header with flexbox (for navbar)*/
 header {
+  padding:0.5em;
   color:white;
   height: 4em;
   background: #70a300;
@@ -24,9 +25,10 @@ header {
       font-size: 20px;
       color: white;
       text-decoration: none;
-      transition: all 0.5s ease 0s;
+      
       &:hover {
-       color: yellow;
+        transition: all 0.5s ease 0s;
+       color: black;
       }
     }
   }
@@ -36,6 +38,7 @@ header {
 section {
   height: 85vh;
 }
+//Start Page container
 .container {
   height: 80%;
   display: grid;
@@ -120,6 +123,8 @@ padding: 0.3em;
     color: black;
   }
 }
+
+
 
 footer {
   height: 5em;

@@ -1,7 +1,7 @@
 <?php 
 include ('includes/header.php');
 ?>
-<div class="container">
+<div class="start-container">
   <div class="col">
     <div class="row">
       <div class="welcome">
@@ -16,7 +16,7 @@ include ('includes/header.php');
     <img src="/pictures/wallet.png" alt=""/>
   </div>
 </div>
-<button>
+<button class="get-started" >
   Get Started
 </button>
 <?php 

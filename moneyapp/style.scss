@@ -7,46 +7,46 @@ body {
 }
 /*Header with flexbox (for navbar)*/
 header {
-  padding:0.5em;
-  color:white;
+  padding: 0.5em;
+  color: white;
   height: 4em;
   background: #70a300;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   nav {
     margin: 0;
-  .nav__links {
-    list-style: none;
-  li {
-    display: inline-block;
-    padding: 1rem 20px;
-    a {
-      font-size: 20px;
-      color: white;
-      text-decoration: none;
-      
-      &:hover {
-        transition: all 0.5s ease 0s;
-       color: black;
+    .nav__links {
+      list-style: none;
+      li {
+        display: inline-block;
+        padding: 1rem 20px;
+        a {
+          font-size: 20px;
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            transition: all 0.5s ease 0s;
+            color: black;
+          }
+        }
       }
     }
-  }
-  }
   }
 }
 section {
   height: 85vh;
 }
 //Start Page container
-.container {
+.start-container {
   height: 80%;
   display: grid;
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   .col {
-      width: 100%;
+    width: 100%;
     .welcome {
       margin: 2em;
       padding: 3em;
@@ -79,26 +79,111 @@ section {
       line-height: 1.5em;
       display: flex;
       align-items: center;
-   
-      justify-content: center;
-      
-    }
-    p{
-         text-align: center;
-      align-self: center;
-      flex:none;
-    }
-    
-  }
-  img{
-      display: block;
-      margin: auto;
-        width: 30vw;
-    }
-}
 
-button {
+      justify-content: center;
+    }
+    p {
+      text-align: center;
+      align-self: center;
+      flex: none;
+    }
+  }
+  img {
+    display: block;
+    margin: auto;
+    width: 30vw;
+  }
+
+ 
+}
+ .universal-container {
+ position: absolute;
+ left: 10%;
+ top: 10%;
+ bottom: 20%;
+   height: 80%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+   margin: 0 auto;
+    width: 80%;
+    background: #f5f5f5;
+    border: 1px solid #ababab;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 56px #c4c4c4;
+    border-radius: 39px;
+  }
+  .income, .outcome, .finance {
+    display: grid;
+    text-align: center;
+    h1 {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+  }
+.submission-form{
+  text-align: center;
+  max-width:200px;
+  margin:1rem auto;
+  padding:1rem;
+  border-radius:5px;
+  select, select option {
+    display:block;
+    padding:1rem;
+    border:2px solid #2980B9;
+    font-size:0.8em;
+    width:100%;
+  }
+  label{
+    display:block;
+    padding:1rem;
+    font-size:20px;
+  }
+  input, textarea{
+    display:block;
+    width:100%;
+    border:2px solid #2980B9;
+   
+    font-size:20px;
+    border-radius:5px;
+  }
+  .button {
+    padding: 1em;
+    margin: 0 auto;
+     margin-top: 2em;
+     display: block;
+     width: 10em;
+     border-radius: 30px;
+     border: 0px;
+     font-size: 1em;
+     text-transform: uppercase;
+     font-weight: 700;
+     color: white;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     &-income{
+      background: #7E9C3D;
+     }
+     &-outcome {
+       background: #D97F7F;
+     }
+  }
+  
+}
+.last-finance {
+  width: 100%;
+  display: grid;
+justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+background: rgba(183, 206, 131, 0.7);
+
+}
+.get-started {
   background: #639100;
+  border: 0px white;
   box-sizing: border-box;
   border-radius: 25px;
   font-family: Open Sans;
@@ -109,9 +194,9 @@ button {
   display: flex;
   align-items: center;
   text-align: center;
-padding: 0.3em;
+  padding: 0.3em;
   color: #ffffff;
-    cursor: pointer;
+  cursor: pointer;
   display: block;
   margin: 0 auto;
   widows: 200px;
@@ -123,8 +208,6 @@ padding: 0.3em;
     color: black;
   }
 }
-
-
 
 footer {
   height: 5em;

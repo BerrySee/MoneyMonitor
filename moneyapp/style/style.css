@@ -21,32 +21,35 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5px 2%;
 }
 
-header .nav__links {
+header nav {
+  margin: 0;
+}
+
+header nav .nav__links {
   list-style: none;
 }
 
-header .nav__links li {
+header nav .nav__links li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 1rem 20px;
 }
 
-header .nav__links li a {
+header nav .nav__links li a {
   font-size: 20px;
   color: white;
   text-decoration: none;
-  -webkit-transition: all 0.3 ease 0s;
-  transition: all 0.3 ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
-header .nav__links li a:hover {
-  color: darkgreen;
+header nav .nav__links li a:hover {
+  color: yellow;
 }
 
 section {
-  height: 80%;
+  height: 85vh;
 }
 
 .container {
@@ -136,7 +139,6 @@ section {
 
 button {
   background: #639100;
-  border: 1px solid #000000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 25px;
@@ -160,12 +162,13 @@ button {
   widows: 200px;
   height: 3em;
   width: 10em;
-  -webkit-transition: all 0.3 ease 0s;
-  transition: all 0.3 ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 button:hover {
   background-color: lightgreen;
+  color: black;
 }
 
 footer {

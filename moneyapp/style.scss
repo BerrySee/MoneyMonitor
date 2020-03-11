@@ -5,9 +5,32 @@ body {
   width: 100vw;
   overflow: hidden;
 }
+/*Header with flexbox (for navbar)*/
 header {
-  height: 5em;
+  color:white;
+  height: 4em;
   background: #70a300;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:5px 2%;
+  .nav__links {
+    list-style: none;
+  li {
+    display: inline-block;
+    padding: 0px 20px;
+    a {
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3 ease 0s;
+      &:hover {
+        color: darkgreen;
+        
+      }
+    }
+  }
+  }
 }
 section {
   height: 80%;
@@ -21,8 +44,8 @@ section {
   .col {
       width: 100%;
     .welcome {
-      margin: 3em;
-      padding: 4em;
+      margin: 2em;
+      padding: 3em;
       background: #f5f5f5;
       box-shadow: 0px 4px 56px #c4c4c4;
       border-radius: 39px;
@@ -91,6 +114,10 @@ padding: 0.3em;
   widows: 200px;
   height: 3em;
   width: 10em;
+  transition: all 0.3 ease 0s;
+  &:hover {
+    background-color: lightgreen;
+  }
 }
 
 footer {

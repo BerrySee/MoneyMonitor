@@ -21,12 +21,14 @@ public function incomeMoney($name, $type, $amount, $date) {
     echo "data inserted";
 }
 public function lastActions() {
-    $sql = "SELECT * FROM income GROUP BY date DESC LIMIT 5";
+    $sql = "SELECT * FROM income GROUP BY date DESC LIMIT 10";
     $stmt = $this->conn->prepare($sql);
     $stmt->execute();
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $data;
 }
-
+/*public function total() {
+majd az összebevétel kiadás összege lesz itt
+}*/
 }
 ?>

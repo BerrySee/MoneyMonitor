@@ -2,7 +2,7 @@ body {
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
@@ -10,7 +10,7 @@ body {
 header {
   padding: 0.5em;
   color: white;
-  height: 3em;
+  height: 5vh;
   background: #70a300;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,7 +49,7 @@ header nav .nav__links li a:hover {
 }
 
 section {
-  height: 85vh;
+  height: 80vh;
 }
 
 .start-container {
@@ -139,17 +139,22 @@ section {
 
 .universal-container {
   position: relative;
-  height: 80vh;
+  height: 80%;
   display: -ms-grid;
   display: grid;
-  gap: 0 0;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "income finance finance outcome";
   margin: 0 auto;
+  margin-top: 2em;
   width: 90%;
   background: #f5f5f5;
   border: 1px solid #ababab;
@@ -161,31 +166,52 @@ section {
 }
 
 .income, .outcome, .finance {
-  display: -ms-grid;
-  display: grid;
   text-align: center;
-  width: 30vw;
 }
 
 .income h1, .outcome h1, .finance h1 {
-  font-size: 36px;
+  font-size: 4vw;
 }
 
 .income h2, .outcome h2, .finance h2 {
-  font-size: 20px;
+  font-size: 2vw;
+}
+
+.income {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: income;
+}
+
+.outcome {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: outcome;
+}
+
+.finance {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: finance;
+  width: 100%;
+}
+
+.finance table {
+  padding: 1em;
 }
 
 .submission-form {
   text-align: center;
   max-width: 20vw;
-  margin: 1rem auto;
-  padding: 1rem;
+  padding: 1vw;
+  margin: 0 auto;
   border-radius: 5px;
 }
 
 .submission-form select, .submission-form select option {
   display: block;
-  padding: 1rem;
+  padding: 1vw;
   border: 2px solid #206c1c;
   font-size: 0.8em;
   width: 100%;
@@ -193,7 +219,7 @@ section {
 
 .submission-form label {
   display: block;
-  padding: 1rem;
+  padding: 1vw;
   font-size: 80%;
 }
 
@@ -206,7 +232,7 @@ section {
 }
 
 .submission-form .button {
-  padding: 1em;
+  padding: 1vw;
   margin: 0 auto;
   margin-top: 2em;
   display: block;
@@ -219,6 +245,8 @@ section {
   color: white;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .submission-form .button-income {
@@ -229,18 +257,23 @@ section {
   background: #D97F7F;
 }
 
+.submission-form .button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .last-finance {
   width: 100%;
-  display: -ms-grid;
-  display: grid;
-  justify-items: auto;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -ms-grid-columns: (minmax(50px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   background: rgba(183, 206, 131, 0.7);
   border-radius: 20px;
+}
+
+.last-finance table {
+  width: 100%;
+}
+
+.last-finance table tr {
+  width: 100%;
 }
 
 .get-started {
@@ -279,14 +312,15 @@ section {
 }
 
 footer {
-  height: 2em;
+  height: 10vh;
   background: #9dbc5a;
 }
 
 @media (max-width: 750px) {
   .universal-container {
-    -ms-grid-columns: (1fr)[2] !important;
-        grid-template-columns: repeat(2, 1fr) !important;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "income outcome" !important;
   }
   .finance {
     display: none !important;

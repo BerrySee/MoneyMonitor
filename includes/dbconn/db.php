@@ -20,15 +20,29 @@ public function incomeMoney($name, $type, $amount, $date) {
     $stmt->execute(['name'=>$name, 'type'=>$type, 'amount'=>$amount, 'date'=>$date]);
     echo "data inserted";
 }
+public function expenseMoney($name, $type, $amount, $date) {
+    $sql = "INSERT INTO outcome (name, type, amount, date) VALUES (:name, :type, :amount, :date)";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute(['name'=>$name, 'type'=>$type, 'amount'=>$amount, 'date'=>$date]);
+    echo "data inserted";
+}
 public function lastActions() {
-    $sql = "SELECT * FROM income GROUP BY date DESC LIMIT 10";
+    $sql = "SELECT * FROM income
+UNION
+SELECT * FROM outcome
+ORDER BY Date DESC LIMIT 10";
     $stmt = $this->conn->prepare($sql);
     $stmt->execute();
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $data;
 }
-/*public function total() {
-majd az összebevétel kiadás összege lesz itt
-}*/
+
+ public function gettotal() {
+    $sql = "SELECT (SELECT SUM(amount) FROM income) - (SELECT SUM(amount) FROM outcome)";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    $total = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $total;
+ }
 }
 ?>

@@ -1,14 +1,14 @@
 body {
   margin: 0 auto;
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 /*Header with flexbox (for navbar)*/
 header {
   padding: 0.5em;
   color: white;
-  height: 3em;
+  height: 5vh;
   background: #70a300;
   display: flex;
   justify-content: space-between;
@@ -35,7 +35,7 @@ header {
   }
 }
 section {
-  height: 85vh;
+  height: 80vh;
 }
 //Start Page container
 .start-container {
@@ -97,13 +97,17 @@ section {
 }
  .universal-container {
  position: relative;
-   height: 80vh;
+   height: 80%;
   display: grid;
-  gap: 0 0;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid; 
+display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "income finance finance outcome";
    margin: 0 auto;
+   margin-top: 2em;
     width: 90%;
     background: #f5f5f5;
     border: 1px solid #ababab;
@@ -112,32 +116,45 @@ section {
     border-radius: 39px;
   }
   .income, .outcome, .finance {
-    display: grid;
+   
     text-align: center;
-   width: 30vw;
     h1 {
-      font-size: 36px;
+      font-size: 4vw;
     }
     h2 {
-      font-size: 20px;
+      font-size: 2vw;
     }
+  }
+  .income {
+grid-area: income;
+  }
+  .outcome {
+    grid-area: outcome;
+  }
+  .finance {
+grid-area: finance;
+width: 100%;
+table {
+  padding: 1em;
+}
+
   }
 .submission-form{
   text-align: center;
   max-width:20vw;
-  margin:1rem auto;
-  padding:1rem;
+  padding: 1vw;
+  margin:0 auto;
   border-radius:5px;
   select, select option {
     display:block;
-    padding:1rem;
+    padding:1vw;
     border:2px solid rgb(32, 108, 28);
     font-size:0.8em;
     width:100%;
   }
   label{
     display:block;
-    padding:1rem;
+    padding:1vw;
     font-size:80%;
   }
   input, textarea{
@@ -148,7 +165,7 @@ section {
     border-radius:5px;
   }
   .button {
-    padding: 1em;
+    padding: 1vw;
     margin: 0 auto;
      margin-top: 2em;
      display: block;
@@ -160,11 +177,15 @@ section {
      font-weight: 700;
      color: white;
      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     transition: all 0.5s ease 0s;
      &-income{
       background: #7E9C3D;
      }
      &-outcome {
        background: #D97F7F;
+     }
+     &:hover {
+       transform: scale(1.2);
      }
   }
   
@@ -173,12 +194,16 @@ section {
 
 .last-finance {
   width: 100%;
-  display: grid;
-justify-items: auto;
-  align-items: baseline;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
 background: rgba(183, 206, 131, 0.7);
 border-radius: 20px;
+table {
+  width: 100%;
+  & tr {
+width: 100%;
+  }
+  
+  
+}
 
 }
 .get-started {
@@ -210,13 +235,14 @@ border-radius: 20px;
 }
 
 footer {
-  height: 2em;
+  height: 10vh;
   background: #9dbc5a;
 }
 
 @media (max-width: 750px) {
   .universal-container {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "income outcome" !important;
   }
   .finance {
     display:none !important;

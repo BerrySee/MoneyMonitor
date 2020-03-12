@@ -1,0 +1,233 @@
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+}
+/*Header with flexbox (for navbar)*/
+header {
+  padding: 0.5em;
+  color: white;
+  height: 3em;
+  background: #70a300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  nav {
+    margin: 0;
+    .nav__links {
+      list-style: none;
+      li {
+        display: inline-block;
+        padding: 1rem 20px;
+        a {
+          font-size: 20px;
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            transition: all 0.5s ease 0s;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+section {
+  height: 85vh;
+}
+//Start Page container
+.start-container {
+  height: 80%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  .col {
+    width: 100%;
+    .welcome {
+      margin: 2em;
+      padding: 3em;
+      background: #f5f5f5;
+      box-shadow: 0px 4px 56px #c4c4c4;
+      border-radius: 39px;
+      h1 {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2em;
+        line-height: 1.5em;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex: none;
+        order: 0;
+        align-self: center;
+        margin: 10px 0px;
+        color: #2a8a84;
+      }
+    }
+    .description {
+      margin: 1em;
+      padding: 1em;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1em;
+      line-height: 1.5em;
+      display: flex;
+      align-items: center;
+
+      justify-content: center;
+    }
+    p {
+      text-align: center;
+      align-self: center;
+      flex: none;
+    }
+  }
+  img {
+    display: block;
+    margin: auto;
+    width: 30vw;
+  }
+
+ 
+}
+ .universal-container {
+ position: relative;
+   height: 80vh;
+  display: grid;
+  gap: 0 0;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+   margin: 0 auto;
+    width: 90%;
+    background: #f5f5f5;
+    border: 1px solid #ababab;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 56px #c4c4c4;
+    border-radius: 39px;
+  }
+  .income, .outcome, .finance {
+    display: grid;
+    text-align: center;
+   width: 30vw;
+    h1 {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+  }
+.submission-form{
+  text-align: center;
+  max-width:20vw;
+  margin:1rem auto;
+  padding:1rem;
+  border-radius:5px;
+  select, select option {
+    display:block;
+    padding:1rem;
+    border:2px solid rgb(32, 108, 28);
+    font-size:0.8em;
+    width:100%;
+  }
+  label{
+    display:block;
+    padding:1rem;
+    font-size:80%;
+  }
+  input, textarea{
+    display:block;
+    width:100%;
+    border:2px solid rgb(32, 108, 28);
+    font-size:14px;
+    border-radius:5px;
+  }
+  .button {
+    padding: 1em;
+    margin: 0 auto;
+     margin-top: 2em;
+     display: block;
+     max-width: 20vw;
+     border-radius: 30px;
+     border: 0px;
+     font-size: 1em;
+     text-transform: uppercase;
+     font-weight: 700;
+     color: white;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     &-income{
+      background: #7E9C3D;
+     }
+     &-outcome {
+       background: #D97F7F;
+     }
+  }
+  
+}
+
+
+.last-finance {
+  width: 100%;
+  display: grid;
+justify-items: auto;
+  align-items: baseline;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+background: rgba(183, 206, 131, 0.7);
+border-radius: 20px;
+
+}
+.get-started {
+  background: #639100;
+  border: 0px white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 49px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0.3em;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  widows: 200px;
+  height: 3em;
+  width: 10em;
+  transition: all 0.5s ease 0s;
+  &:hover {
+    background-color: lightgreen;
+    color: black;
+  }
+}
+
+footer {
+  height: 2em;
+  background: #9dbc5a;
+}
+
+@media (max-width: 750px) {
+  .universal-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .finance {
+    display:none !important;
+  }
+  .welcome {
+    padding: 1em !important;
+  }
+  .description {
+    display: none !important;
+  }
+  img {
+    width: 100px !important;
+  }
+}

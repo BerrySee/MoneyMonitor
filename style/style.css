@@ -1,0 +1,304 @@
+body {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+}
+
+/*Header with flexbox (for navbar)*/
+header {
+  padding: 0.5em;
+  color: white;
+  height: 3em;
+  background: #70a300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav {
+  margin: 0;
+}
+
+header nav .nav__links {
+  list-style: none;
+}
+
+header nav .nav__links li {
+  display: inline-block;
+  padding: 1rem 20px;
+}
+
+header nav .nav__links li a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+header nav .nav__links li a:hover {
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  color: black;
+}
+
+section {
+  height: 85vh;
+}
+
+.start-container {
+  height: 80%;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.start-container .col {
+  width: 100%;
+}
+
+.start-container .col .welcome {
+  margin: 2em;
+  padding: 3em;
+  background: #f5f5f5;
+  -webkit-box-shadow: 0px 4px 56px #c4c4c4;
+          box-shadow: 0px 4px 56px #c4c4c4;
+  border-radius: 39px;
+}
+
+.start-container .col .welcome h1 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 10px 0px;
+  color: #2a8a84;
+}
+
+.start-container .col .description {
+  margin: 1em;
+  padding: 1em;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.start-container .col p {
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+.start-container img {
+  display: block;
+  margin: auto;
+  width: 30vw;
+}
+
+.universal-container {
+  position: relative;
+  height: 80vh;
+  display: -ms-grid;
+  display: grid;
+  gap: 0 0;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  width: 90%;
+  background: #f5f5f5;
+  border: 1px solid #ababab;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 56px #c4c4c4;
+          box-shadow: 0px 4px 56px #c4c4c4;
+  border-radius: 39px;
+}
+
+.income, .outcome, .finance {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  width: 30vw;
+}
+
+.income h1, .outcome h1, .finance h1 {
+  font-size: 36px;
+}
+
+.income h2, .outcome h2, .finance h2 {
+  font-size: 20px;
+}
+
+.submission-form {
+  text-align: center;
+  max-width: 20vw;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.submission-form select, .submission-form select option {
+  display: block;
+  padding: 1rem;
+  border: 2px solid #206c1c;
+  font-size: 0.8em;
+  width: 100%;
+}
+
+.submission-form label {
+  display: block;
+  padding: 1rem;
+  font-size: 80%;
+}
+
+.submission-form input, .submission-form textarea {
+  display: block;
+  width: 100%;
+  border: 2px solid #206c1c;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.submission-form .button {
+  padding: 1em;
+  margin: 0 auto;
+  margin-top: 2em;
+  display: block;
+  max-width: 20vw;
+  border-radius: 30px;
+  border: 0px;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.submission-form .button-income {
+  background: #7E9C3D;
+}
+
+.submission-form .button-outcome {
+  background: #D97F7F;
+}
+
+.last-finance {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  justify-items: auto;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-grid-columns: (minmax(50px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  background: rgba(183, 206, 131, 0.7);
+  border-radius: 20px;
+}
+
+.get-started {
+  background: #639100;
+  border: 0px white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 25px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 49px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0.3em;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  widows: 200px;
+  height: 3em;
+  width: 10em;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.get-started:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+footer {
+  height: 2em;
+  background: #9dbc5a;
+}
+
+@media (max-width: 750px) {
+  .universal-container {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .finance {
+    display: none !important;
+  }
+  .welcome {
+    padding: 1em !important;
+  }
+  .description {
+    display: none !important;
+  }
+  img {
+    width: 100px !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

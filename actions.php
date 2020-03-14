@@ -1,4 +1,5 @@
 <?php 
+$page= 'actions';
 include ('includes/header.php');
 ?>
 <?php 
@@ -44,14 +45,14 @@ $total= $db->getTotal();
 </thead>
 <tbody>
     <?php foreach ($data as $i) {?>
-    <tr style="<?php 
+    <tr  style="<?php 
 
     if($i['type'] != 'Salary' && $i['type'] != 'Gift' ) {
         echo "background: #D97F7F;";
     } else {
         echo "background: #7E9C3D;";
     }
-    ?>">
+    ?>" class="record">
         <td> <?php echo $i['name'] ?></td>
         <td> <?php echo $i['type'] ?></td>
         <td> <?php echo $i['amount'] ?></td>

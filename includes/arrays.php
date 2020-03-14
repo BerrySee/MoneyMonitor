@@ -3,11 +3,14 @@
 $navItems  = array (
     array(
         'slug' => "index.php",
-        'title' => "Startpage"
+        'title' => "Startpage",
+        'class'=>'index'
+        
     ),
     array(
         'slug' => "actions.php",
-        'title' => "Actions"
+        'title' => "Actions",
+        'class'=>'actions'
     ),
     array(
         'slug' => "wallet.php",

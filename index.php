@@ -1,4 +1,5 @@
 <?php 
+$page = 'index';
 include ('includes/header.php');
 ?>
 <div class="start-container">
@@ -16,9 +17,11 @@ include ('includes/header.php');
     <img src="pictures/wallet.png" alt=""/>
   </div>
 </div>
-<button class="get-started" >
-  Get Started
+<form action="actions.php">
+<button type="submit" class="get-started" >
+Get started
 </button>
+</form>
 <?php 
 include ('includes/footer.php');
 ?>

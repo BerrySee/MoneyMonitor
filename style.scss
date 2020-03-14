@@ -1,3 +1,4 @@
+@import 'variables.scss';
 body {
   margin: 0 auto;
   box-sizing: border-box;
@@ -35,7 +36,7 @@ header {
   }
 }
 section {
-  height: 80vh;
+height: 76vh;
 }
 //Start Page container
 .start-container {
@@ -92,28 +93,11 @@ section {
     margin: auto;
     width: 30vw;
   }
-
- 
 }
+//actions page
  .universal-container {
- position: relative;
-   height: 80%;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  display: grid; 
-display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "income finance finance outcome";
-   margin: 0 auto;
-   margin-top: 2em;
-    width: 90%;
-    background: #f5f5f5;
-    border: 1px solid #ababab;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 56px #c4c4c4;
-    border-radius: 39px;
+ @include universal-container;
+  transition: all 0.5s ease 0s;
   }
   .income, .outcome, .finance {
    
@@ -158,11 +142,8 @@ table {
     font-size:80%;
   }
   input, textarea{
-    display:block;
-    width:100%;
-    border:2px solid rgb(32, 108, 28);
-    font-size:14px;
-    border-radius:5px;
+   @include input;
+   width: 100%;
   }
   .button {
     padding: 1vw;
@@ -190,8 +171,6 @@ table {
   }
   
 }
-
-
 .last-finance {
   width: 100%;
 background: rgba(183, 206, 131, 0.7);
@@ -204,7 +183,10 @@ width: 100%;
   
   
 }
-
+}
+.record {
+border: 1px solid black;
+border-radius: 5em;
 }
 .get-started {
   background: #639100;
@@ -233,9 +215,47 @@ width: 100%;
     color: black;
   }
 }
+//wallet page
+.wallet-container {
+  @include wallet-container;
+  transition: all 0.5s ease 0s;
 
+  h1{
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+  }
+  form {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    input {
+      margin: 2vw;
+      @include input;
+      width: 70%;
+    }
+    label {
+      font-weight:900;
+      font-size: 16px;
+      margin: 2vw;
+      text-align: center;
+    }
+  }
+  table {
+    
+    text-align: center;
+    padding: 1em;
+    font-size: 2.2vw;
+    width: 100%;
+  }
+}
+.history {
+ height: 70%;
+overflow-y: scroll;
+}
 footer {
-  height: 10vh;
+  margin-top: 2em;
+  height: 5vh;
   background: #9dbc5a;
 }
 

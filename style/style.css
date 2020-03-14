@@ -49,7 +49,7 @@ header nav .nav__links li a:hover {
 }
 
 section {
-  height: 80vh;
+  height: 76vh;
 }
 
 .start-container {
@@ -139,7 +139,17 @@ section {
 
 .universal-container {
   position: relative;
-  height: 80%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 2em;
+  width: 90%;
+  background: #f5f5f5;
+  border: 1px solid #ababab;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 56px #c4c4c4;
+          box-shadow: 0px 4px 56px #c4c4c4;
+  border-radius: 39px;
   display: -ms-grid;
   display: grid;
   justify-items: center;
@@ -153,16 +163,8 @@ section {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: "income finance finance outcome";
-  margin: 0 auto;
-  margin-top: 2em;
-  width: 90%;
-  background: #f5f5f5;
-  border: 1px solid #ababab;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 0px 4px 56px #c4c4c4;
-          box-shadow: 0px 4px 56px #c4c4c4;
-  border-radius: 39px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .income, .outcome, .finance {
@@ -225,10 +227,10 @@ section {
 
 .submission-form input, .submission-form textarea {
   display: block;
-  width: 100%;
   border: 2px solid #206c1c;
   font-size: 14px;
   border-radius: 5px;
+  width: 100%;
 }
 
 .submission-form .button {
@@ -276,6 +278,11 @@ section {
   width: 100%;
 }
 
+.record {
+  border: 1px solid black;
+  border-radius: 5em;
+}
+
 .get-started {
   background: #639100;
   border: 0px white;
@@ -311,8 +318,71 @@ section {
   color: black;
 }
 
+.wallet-container {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 2em;
+  width: 90%;
+  background: #f5f5f5;
+  border: 1px solid #ababab;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 56px #c4c4c4;
+          box-shadow: 0px 4px 56px #c4c4c4;
+  border-radius: 39px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.wallet-container h1 {
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+}
+
+.wallet-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wallet-container form input {
+  margin: 2vw;
+  display: block;
+  border: 2px solid #206c1c;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.wallet-container form label {
+  font-weight: 900;
+  font-size: 16px;
+  margin: 2vw;
+  text-align: center;
+}
+
+.wallet-container table {
+  text-align: center;
+  padding: 1em;
+  font-size: 2.2vw;
+  width: 100%;
+}
+
+.history {
+  height: 70%;
+  overflow-y: scroll;
+}
+
 footer {
-  height: 10vh;
+  margin-top: 2em;
+  height: 5vh;
   background: #9dbc5a;
 }
 

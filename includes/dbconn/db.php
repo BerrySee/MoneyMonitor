@@ -44,5 +44,16 @@ ORDER BY Date DESC LIMIT 10";
     $total = $stmt->fetch(PDO::FETCH_ASSOC);
     return $total;
  }
+
+ public function getHistory() {
+     $sql = "SELECT * FROM income
+UNION
+SELECT * FROM outcome
+ORDER BY Date DESC";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    $history = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $history;
+ }
 }
 ?>

@@ -7,12 +7,14 @@ $history = $db->getHistory();
 <div class="wallet-container">
 <h1>Search in History</h1>
 
-    <form class="">
+    <form method="GET" action="/includes/searchdata.php">
         <label class="label1" for="">From:</label>
-        <input class="input1" type="date">
+        <input class="input1" type="date" name="from">
         <label class="label2" for="">To:</label>
-        <input class="input2" type="date">
+        <input class="input2" type="date" name="to">
+        <button type="submit" name="search">Search</button>
     </form>
+    
     <div class="history">
 <table>
     <thead>
@@ -31,7 +33,7 @@ $history = $db->getHistory();
         ?>
          <tr  style="<?php 
 
-    if($item['type'] != 'Salary' && $item['type'] != 'Gift' ) {
+    if($item['constant'] == 0 ) {
         echo "background: #D97F7F;";
     } else {
         echo "background: #7E9C3D;";
@@ -41,13 +43,16 @@ $history = $db->getHistory();
         <td> <?php echo $item['type'] ?></td>
         <td> <?php echo $item['amount'] ?></td>
         <td> <?php echo $item['date'] ?></td>
-        <td><button></button></td>
+        <td> <form action='includes/delete.php' method="POST"> <input type="hidden" name="id" value="<?php echo $item['id'] ?>">
+        <input type="hidden" name="constant" value="<?php echo $item['constant'] ?>"><button type="submit" name="delete" value="Delete">Delete</button>  </form>  </td>
     </tr>
     <?php } ?>
     </tbody>
 </table>
-</div>
 
+
+
+</div>
 
 
 </div>

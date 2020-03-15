@@ -2,14 +2,14 @@
 body {
   margin: 0 auto;
   box-sizing: border-box;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
 }
 /*Header with flexbox (for navbar)*/
 header {
   padding: 0.5em;
   color: white;
-  height: 5vh;
+  height: 5%;
   background: #70a300;
   display: flex;
   justify-content: space-between;
@@ -36,13 +36,13 @@ header {
   }
 }
 section {
-height: 76vh;
+height: 76%;
+
 }
 //Start Page container
 .start-container {
-  height: 80%;
+  height: 85%;
   display: grid;
-  justify-items: center;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   .col {
@@ -184,29 +184,19 @@ width: 100%;
   
 }
 }
-.record {
-border: 1px solid black;
-border-radius: 5em;
-}
+
 .get-started {
   background: #639100;
-  border: 0px white;
-  box-sizing: border-box;
   border-radius: 25px;
   font-family: Open Sans;
-  font-style: normal;
   font-weight: 600;
   font-size: 1.5em;
   line-height: 49px;
-  display: flex;
-  align-items: center;
   text-align: center;
-  padding: 0.3em;
   color: #ffffff;
   cursor: pointer;
   display: block;
   margin: 0 auto;
-  widows: 200px;
   height: 3em;
   width: 10em;
   transition: all 0.5s ease 0s;
@@ -217,6 +207,7 @@ border-radius: 5em;
 }
 //wallet page
 .wallet-container {
+   height: 100vh; /* or position:absolute; height:100%; */
   @include wallet-container;
   transition: all 0.5s ease 0s;
 
@@ -242,20 +233,24 @@ border-radius: 5em;
     }
   }
   table {
-    
+    margin: 0 auto;
     text-align: center;
     padding: 1em;
     font-size: 2.2vw;
-    width: 100%;
+    width: 90%;
+    transition: all 0.5s ease 0s;
+    tr {
+      transition: all 0.5s ease 0s;
+    }
   }
 }
 .history {
- height: 70%;
-overflow-y: scroll;
+height: 70%;
+overflow: auto;
 }
+
 footer {
-  margin-top: 2em;
-  height: 5vh;
+  height: 5%;
   background: #9dbc5a;
 }
 

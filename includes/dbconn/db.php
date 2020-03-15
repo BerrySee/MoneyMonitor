@@ -15,13 +15,13 @@ public function __construct() {
     } 
 }
 public function incomeMoney($name, $type, $amount, $date) {
-    $sql = "INSERT INTO income (name, type, amount, date) VALUES (:name, :type, :amount, :date)";
+    $sql = "INSERT INTO income (name, type, amount, date, constant) VALUES (:name, :type, :amount, :date, 1)";
     $stmt = $this->conn->prepare($sql);
     $stmt->execute(['name'=>$name, 'type'=>$type, 'amount'=>$amount, 'date'=>$date]);
     echo "data inserted";
 }
 public function expenseMoney($name, $type, $amount, $date) {
-    $sql = "INSERT INTO outcome (name, type, amount, date) VALUES (:name, :type, :amount, :date)";
+    $sql = "INSERT INTO outcome (name, type, amount, date, constant) VALUES (:name, :type, :amount, :date, 0)";
     $stmt = $this->conn->prepare($sql);
     $stmt->execute(['name'=>$name, 'type'=>$type, 'amount'=>$amount, 'date'=>$date]);
     echo "data inserted";
@@ -55,5 +55,14 @@ ORDER BY Date DESC";
     $history = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $history;
  }
+
+ public function deleteRow($id, $constant) {
+    $sql  ="DELETE FROM income WHERE id = :id AND constant = :constant;
+    DELETE FROM outcome WHERE id = :id AND constant = :constant;
+    ";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute(['id'=>$id, 'constant'=>$constant]);
+    echo "Deleted record";
+}
 }
 ?>

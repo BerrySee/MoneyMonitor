@@ -1,11 +1,9 @@
 @mixin universal-container {
-    position: relative;
    height: 100%;
    margin: 0 auto;
    margin-top: 2em;
     width: 90%;
     background: #f5f5f5;
-    border: 1px solid #ababab;
     box-sizing: border-box;
     box-shadow: 0px 4px 56px #c4c4c4;
     border-radius: 39px;
@@ -13,10 +11,6 @@
 }
 @mixin grid {
     display: grid;
-  justify-items: center;
-  align-items: center;
-  display: grid; 
-display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "income finance finance outcome";

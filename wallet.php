@@ -7,7 +7,7 @@ $history = $db->getHistory();
 <div class="wallet-container">
 <h1>Search in History</h1>
 
-    <form method="GET" action="/includes/searchdata.php">
+    <form method="POST" action="/includes/searchdata.php">
         <label class="label1" for="">From:</label>
         <input class="input1" type="date" name="from">
         <label class="label2" for="">To:</label>
@@ -34,9 +34,9 @@ $history = $db->getHistory();
          <tr  style="<?php 
 
     if($item['constant'] == 0 ) {
-        echo "background: #D97F7F;";
+        echo "background: rgba(217, 127, 127, 0.7);";
     } else {
-        echo "background: #7E9C3D;";
+        echo "background: rgba(126, 156, 61, 0.7);";
     }
     ?>">
         <td> <?php echo $item['name'] ?></td>

@@ -140,6 +140,9 @@ section {
   height: 100%;
   margin: 0 auto;
   margin-top: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 90%;
   background: #f5f5f5;
   -webkit-box-sizing: border-box;
@@ -255,17 +258,11 @@ section {
           transform: scale(1.2);
 }
 
-.last-finance {
-  width: 100%;
-  background: rgba(183, 206, 131, 0.7);
-  border-radius: 20px;
-}
-
-.last-finance table {
+table {
   width: 100%;
 }
 
-.last-finance table tr {
+table tr {
   width: 100%;
 }
 
@@ -301,9 +298,6 @@ section {
   margin-top: 2em;
   width: 90%;
   background: #f5f5f5;
-  border: 1px solid #ababab;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   -webkit-box-shadow: 0px 4px 56px #c4c4c4;
           box-shadow: 0px 4px 56px #c4c4c4;
   border-radius: 39px;
@@ -350,13 +344,6 @@ section {
   padding: 1em;
   font-size: 2.2vw;
   width: 90%;
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-}
-
-.wallet-container table tr {
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
 }
 
 .history {

@@ -1,5 +1,4 @@
 <?php 
-$page= 'actions';
 include ('includes/header.php');
 ?>
 <?php 
@@ -33,7 +32,6 @@ $total= $db->getTotal();
 </div>
 <div class="finance">
 <h2> Your last finance actions:</h2>
-<div class="last-finance" > 
 <table>
 <thead>
 <tr>
@@ -48,9 +46,9 @@ $total= $db->getTotal();
     <tr  style="<?php 
 
     if($i['type'] != 'Salary' && $i['type'] != 'Gift' ) {
-        echo "background: #D97F7F;";
+        echo "background: rgba(217, 127, 127, 0.7);";
     } else {
-        echo "background: #7E9C3D;";
+        echo "background: rgba(126, 156, 61, 0.7);";
     }
     ?>" class="record">
         <td> <?php echo $i['name'] ?></td>
@@ -62,7 +60,6 @@ $total= $db->getTotal();
 </tbody>
 </table>
 
-</div>
 <h2>Your total Budget: <?php foreach($total as $money ){
     if($money < 0|| $money > 0) {
     echo $money;
@@ -70,7 +67,7 @@ $total= $db->getTotal();
 }  ?>  ft</h2>
 </div>
 <div class="outcome">
-    <h1>Outcome</h1>
+    <h1>Expense</h1>
 <form action="includes/expense.php" class="submission-form" method="post">
  <label for="">Person</label>
     <select name="name" required>

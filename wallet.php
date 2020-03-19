@@ -44,7 +44,7 @@ $history = $db->getHistory();
         <td> <?php echo $item['amount'] ?></td>
         <td> <?php echo $item['date'] ?></td>
         <td> <form action='includes/delete.php' method="POST"> <input type="hidden" name="id" value="<?php echo $item['id'] ?>">
-        <input type="hidden" name="constant" value="<?php echo $item['constant'] ?>"><button type="submit" name="delete" value="Delete">Delete</button>  </form>  </td>
+        <input type="hidden" name="constant" value="<?php echo $item['constant'] ?>"><button style="background-color:rgba(192, 57, 43, 1); color: white; border: 0px;" type="submit" name="delete" value="Delete">Delete</button>  </form>  </td>
     </tr>
     <?php } ?>
     </tbody>

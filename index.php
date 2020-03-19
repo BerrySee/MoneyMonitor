@@ -2,7 +2,7 @@
 $page = 'index';
 include ('includes/header.php');
 ?>
-<div class="start-container">
+<div style="margin-top: 2em;" class="start-container">
   <div class="col">
     <div class="row">
       <div class="welcome">

@@ -2,7 +2,7 @@ body {
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
@@ -10,7 +10,7 @@ body {
 header {
   padding: 0.5em;
   color: white;
-  height: 5%;
+  height: 15%;
   background: #70a300;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,10 +49,11 @@ header nav .nav__links li a:hover {
 }
 
 section {
-  height: 76%;
+  height: 80vh;
 }
 
 .start-container {
+  margin-top: 2em;
   height: 85%;
   display: -ms-grid;
   display: grid;
@@ -349,11 +350,6 @@ table tr {
 .history {
   height: 70%;
   overflow: auto;
-}
-
-footer {
-  height: 5%;
-  background: #9dbc5a;
 }
 
 @media (max-width: 750px) {

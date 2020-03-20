@@ -2,7 +2,9 @@
 $page = 'index';
 include ('includes/header.php');
 ?>
+<div id=coins></div>
 <div style="margin-top: 2em;" class="start-container">
+
   <div class="col">
     <div class="row">
       <div class="welcome">
@@ -14,7 +16,7 @@ include ('includes/header.php');
     </div>
   </div>
   <div class="col">
-    <img src="pictures/wallet.png" alt=""/>
+    <img class="picture" src="pictures/wallet.png" alt=""/>
   </div>
 </div>
 <form action="actions.php">

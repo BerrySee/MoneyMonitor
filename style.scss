@@ -1,3 +1,4 @@
+@import 'animation.scss';
 @import 'variables.scss';
 body {
   margin: 0 auto;
@@ -9,7 +10,7 @@ body {
 header {
   padding: 0.5em;
   color: white;
-  height: 15%;
+  height: 5vh;
   background: #70a300;
   display: flex;
   justify-content: space-between;
@@ -182,7 +183,9 @@ width: 100%;
 
 
 .get-started {
+  z-index: 1;
   background: #639100;
+  border: 0px;
   border-radius: 25px;
   font-family: Open Sans;
   font-weight: 600;
@@ -243,6 +246,10 @@ height: 70%;
 overflow: auto;
 }
   
+footer {
+  background: #9dbc5a; 
+  height: 5vh;
+}
 
 
 @media (max-width: 750px) {
@@ -259,7 +266,8 @@ overflow: auto;
   .description {
     display: none !important;
   }
-  img {
+  .picture {
     width: 100px !important;
   }
 }
+

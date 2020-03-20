@@ -1,0 +1,23 @@
+@keyframes coins {
+0% {
+    opacity : 0;
+    top: 0%;
+}
+10% {
+   transform: rotate(90deg);
+}
+30% {
+     opacity: 1;
+    transform: rotate(180deg);
+}
+50% {
+    transform: rotate(240deg);
+}
+70% {
+    transform: rotate(360deg);
+}
+100% {
+    opacity : 1;
+    top: 95%;
+}
+}

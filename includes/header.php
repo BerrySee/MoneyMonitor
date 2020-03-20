@@ -15,6 +15,7 @@ include ('includes/arrays.php');
   <body>
     <header>
       <h1>Money Monitor</h1>
+      <input type="checkbox" name="checkbox">
       <nav>
        
          <?php 

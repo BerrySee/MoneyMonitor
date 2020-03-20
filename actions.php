@@ -42,19 +42,19 @@ $total= $db->getTotal();
 </tr>
 </thead>
 <tbody>
-    <?php foreach ($data as $i) {?>
+    <?php foreach ($data as $item) {?>
     <tr  style="<?php 
 
-    if($i['type'] != 'Salary' && $i['type'] != 'Gift' ) {
+    if($item['constant'] == 0 ) {
         echo "background: rgba(217, 127, 127, 0.7);";
     } else {
         echo "background: rgba(126, 156, 61, 0.7);";
     }
     ?>" class="record">
-        <td> <?php echo $i['name'] ?></td>
-        <td> <?php echo $i['type'] ?></td>
-        <td> <?php echo $i['amount'] ?></td>
-        <td> <?php echo $i['date'] ?></td>
+        <td> <?php echo $item['name'] ?></td>
+        <td> <?php echo $item['type'] ?></td>
+        <td> <?php echo $item['amount'] ?></td>
+        <td> <?php echo $item['date'] ?></td>
     </tr>
     <?php } ?>
 </tbody>

@@ -6,7 +6,8 @@ Bertalan Bogyó </h3>
 <h3 id ="year"></h3>
 </span >
 </footer>
-    <script src = "includes/year.js"></script>
-    <script src = "includes/coin.js"></script>
+    <script src = "scripts/year.js"></script>
+    <script src = "scripts/coin.js"></script>
+    <script src = "scripts/mode.js"></script>
   </body>
 </html>

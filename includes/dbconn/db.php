@@ -1,5 +1,6 @@
 <?php
 class DB {
+    //db connection variables
 private $dbHost = "localhost";
 private $dbUser = "root";
 private $dbPassword = "gizike94";
@@ -7,10 +8,11 @@ private $dbName ="finance";
 private $conn;
 
 public function __construct() {
+    //error handling
     try {
         $dsn ="mysql:host=".$this->dbHost. ";dbname=".$this->dbName;
         $this->conn = new PDO($dsn, $this->dbUser, $this->dbPassword);
-    } catch(PDOExepstion $e){
+    } catch(PDOException $e){
         die("DB connection failed: ".$e->getMessage());
     } 
 }

@@ -5,6 +5,10 @@ $db  = new DB();
 $history = $db->getHistory();
 ?>
 <div class="wallet-container">
+<table>
+
+
+</table>
 
 </div>
 <?php 

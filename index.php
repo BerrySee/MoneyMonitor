@@ -10,7 +10,6 @@ include ('includes/header.php');
       <div class="welcome">
         <h1>Welcome to my Money Monitor application.</h1>
       </div>
-
   </div>
   <div class="col">
     <img class="picture" src="pictures/wallet.png" alt=""/>

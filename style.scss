@@ -7,7 +7,7 @@
   font-family: $fonts;
 }
 body {
-  
+  background-color: var(--section-bg);
   margin: 0 auto;
   box-sizing: border-box;
   height: 100%;
@@ -34,7 +34,7 @@ header {
   padding:0;
     margin: 0;
     .nav__links {
-       transition: all 1s ease 0s;
+       transition: all 0.5s ease 0s;
       list-style: none;
       li {
         display: inline-block;
@@ -105,7 +105,6 @@ header {
 }
 
 section {
-  transition: all 0.5s ease 0s;
   z-index: -1;
   background-color: var(--section-bg);
   top:7%;
@@ -350,7 +349,7 @@ footer {
   nav {
 
 .responsive{
- transition: all 1s ease 0s;
+ transition: all 0.5s ease 0s;
   background-color:var(--footer-header-bg);
   position: absolute;
   top:15%;

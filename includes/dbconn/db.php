@@ -66,5 +66,18 @@ ORDER BY Date DESC";
     $stmt->execute(['id'=>$id, 'constant'=>$constant]);
     echo "Deleted record";
 }
+/*
+ public function search($dateFrom, $dateTo) {
+     $sql = "SELECT *
+  FROM (SELECT * FROM income
+        UNION
+        SELECT * FROM outcome
+       ) AS U
+ WHERE U.date BETWEEN :dateFrom AND :dateTo";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute(['dateFrom'=>$dateFrom, 'dateTo'=>$dateTo]);
+    $search = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $search;
+ }*/
 }
 ?>

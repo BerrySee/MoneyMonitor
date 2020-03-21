@@ -1,9 +1,5 @@
 let coins = document.getElementById("coins");
-coins.style.position = "absolute";
-coins.style.top = "0";
-coins.style.width = "100%";
-coins.style.height = "100vh";
-coins.style.zIndex = "-1";
+
 for (let i = 0; i < 10; i++) {
   let randomNumberSize = Math.floor(Math.random() * 60) + 20;
   let randomAnimation = Math.floor(Math.random() * 10) + 5;

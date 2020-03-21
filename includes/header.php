@@ -15,13 +15,24 @@ include ('includes/arrays.php');
   <body>
     <header>
       <h1>Money Monitor</h1>
-      <input type="checkbox" name="checkbox">
+       <div class="theme-switch-wrapper">
+       <label class="theme-switch" for="checkbox">
+    <input type="checkbox" id="checkbox" />
+    </div>
+  </label>
       <nav>
        
          <?php 
          include ('includes/nav.php');
          ?>
-    
+         
       </nav>
+      <div class="bars" id="bar-icon">
+           <div class="bar1"></div>
+           <div class="bar2"></div>
+           <div class="bar3"></div>
+         </div>
+      
+         
     </header>
     <section>

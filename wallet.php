@@ -31,7 +31,7 @@ $history = $db->getHistory();
         <?php
         foreach($history as $item) {
         ?>
-         <tr  style="<?php 
+         <tr  style="<?php  
 
     if($item['constant'] == 0 ) {
         echo "background: rgba(217, 127, 127, 0.7);";

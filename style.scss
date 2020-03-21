@@ -76,7 +76,31 @@ header {
 .theme-switch-wrapper {
   position: absolute;
   top: 25%;
-  left: 30vh;
+  left: 35vh;
+  input[type="checkbox"] {
+    width: 40px;
+    height: 20px;
+    background:var(--get-started-hover-bg);
+    border-radius: 20px;
+    appearance: none;
+    transition: all 0.5s ease 0s;
+  }
+  input[type="checkbox"]:before {
+    content:'';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left:9%;
+    top:10%;
+    background-color: white;
+    transform: scale(1.1);
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    transition: all 0.5s ease 0s;
+  }
+  input:checked[type="checkbox"]:before{
+    left: 50%;
+  }
 }
 }
 
@@ -141,6 +165,7 @@ section {
     display: block;
     margin: auto;
     width: 30vw;
+    filter: var(--hue)
   }
 }
 //actions page
@@ -174,25 +199,26 @@ table {
   }
 .submission-form{
   text-align: center;
-  max-width:20vw;
   padding: 1vw;
   margin:0 auto;
-  border-radius:5px;
-  select, select option {
+  max-width: 30vw;
+  
+  select, option {
+    background: var(--input-bg);
     display:block;
-    padding:1vw;
-    border:2px solid rgb(32, 108, 28);
+    border:2px solid var(--get-started-bg);
     font-size:0.8em;
-    width:100%;
+    width:103%;
+    color: var(--main-color);
   }
   label{
     display:block;
     padding:1vw;
     font-size:2vh;
   }
-  input, textarea{
+  input{
    @include input;
-   width: 100%;
+   
   }
   .button {
     padding: 1vw;
@@ -205,7 +231,7 @@ table {
      font-size: 1em;
      text-transform: uppercase;
      font-weight: 700;
-     color: white;
+     color: var(--main-color);
      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
      transition: all 0.5s ease 0s;
      &-income{

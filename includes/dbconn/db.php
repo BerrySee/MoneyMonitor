@@ -66,18 +66,27 @@ ORDER BY Date DESC";
     $stmt->execute(['id'=>$id, 'constant'=>$constant]);
     echo "Deleted record";
 }
-/*
- public function search($dateFrom, $dateTo) {
-     $sql = "SELECT *
-  FROM (SELECT * FROM income
-        UNION
-        SELECT * FROM outcome
-       ) AS U
- WHERE U.date BETWEEN :dateFrom AND :dateTo";
+
+
+
+ public function statTotal() {
+     $sql = "SELECT * FROM
+(SELECT SUM(amount) as amount FROM income
+UNION
+SELECT SUM(amount) as amount FROM outcome) as total";
     $stmt = $this->conn->prepare($sql);
-    $stmt->execute(['dateFrom'=>$dateFrom, 'dateTo'=>$dateTo]);
-    $search = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return $search;
- }*/
+    $stmt->execute();
+    $statisticTotal = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $statisticTotal;
+ }
+ public function statExpense() {
+     $sql = "SELECT type, SUM(amount) as amount FROM outcome
+GROUP BY type
+ORDER BY SUM(amount) DESC;";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    $statisticExpense = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $statisticExpense;
+ }
 }
 ?>

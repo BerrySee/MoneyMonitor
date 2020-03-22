@@ -10,7 +10,8 @@ include ('includes/arrays.php');
     <title>Money Monitor</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style/style.css?=v3"/>
+    <link rel="stylesheet" href="style/style.css?=v1"/>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   </head>
   <body>
     <header>

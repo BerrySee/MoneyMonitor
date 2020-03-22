@@ -1,0 +1,22 @@
+{
+  "name": "moneyapp",
+  "version": "1.0.0",
+  "description": "Money monitor app ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BerrySee/MoneyMonitor.git"
+  },
+  "keywords": [
+    "money"
+  ],
+  "author": "Bogyó Bertalan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BerrySee/MoneyMonitor/issues"
+  },
+  "homepage": "https://github.com/BerrySee/MoneyMonitor#readme"
+}

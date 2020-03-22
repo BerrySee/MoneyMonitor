@@ -7,8 +7,9 @@ if(ISSET($_POST['incomeMoney'])){
     $amount = $_POST['amount'];
     $date = $_POST['date'];
 
-    $db = new DB();
-    $db->incomeMoney($name, $type, $amount, $date);
+    $income = new DB();
+    $income->incomeMoney($name, $type, $amount, $date);
+    $income = null;
     header('Location: ../actions.php');
 
 }

@@ -9,6 +9,7 @@ if(ISSET($_POST['expenseMoney'])){
 
     $expense = new DB();
     $expense->expenseMoney($name, $type, $amount, $date);
+    $expense = null;
     header('Location: ../actions.php');
 
 }

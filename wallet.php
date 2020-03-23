@@ -6,11 +6,13 @@ $data = $db->getHistory();
 ?>
 <div class="wallet-container">
 <h1>History</h1>
-
+<table>
+   
+</table>
     
     <div class="history" id="filtered">
 <table>
-    <thead>
+     <thead>
         <tr>
             <th>Person</th>
             <th>Type</th>
@@ -20,7 +22,7 @@ $data = $db->getHistory();
         </tr>
     </thead>
     <tbody>
-        <!--PHP will be here foreach-->
+        
         <?php
         foreach($data as $item) {
         ?>
@@ -42,9 +44,6 @@ $data = $db->getHistory();
     <?php } ?>
     </tbody>
 </table>
-
-
-
 </div>
 
 
@@ -52,3 +51,5 @@ $data = $db->getHistory();
 <?php 
 include ('includes/footer.php');
 ?>
+</body>
+</html>

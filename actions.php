@@ -1,5 +1,6 @@
 <?php 
 include ('includes/header.php');
+include ('includes/arrays.php');
 ?>
 <?php 
 require_once('includes/dbconn/db.php');
@@ -24,7 +25,7 @@ $total= $db->getTotal();
     <label for="">Amount (Ft)</label>
     <input type="number" min="1" name="amount" required>
     <label for="">Date</label>
-    <input type="date" placeholder="dd/mm/yyyy" pattern="(^(((0[1-9]|1[0-9]|2[0-8])[\/](0[1-9]|1[012]))|((29|30|31)[\/](0[13578]|1[02]))|((29|30)[\/](0[4,6,9]|11)))[\/](19|[2-9][0-9])\d\d$)|(^29[\/]02[\/](19|[2-9][0-9])(00|04|08|12|16|20|24|28|32|36|40|44|48|52|56|60|64|68|72|76|80|84|88|92|96)$)" required name="date">
+    <input type="date" placeholder="dd/mm/yyyy" required name="date">
 
     <button class="button button-income" name="incomeMoney">Send</button>
 </form>
@@ -76,18 +77,17 @@ $total= $db->getTotal();
     </select>
     <label for="">Type</label>
     <select name="type" id="" required>
-        <option value="rent house">Rent House</option>
-        <option value="car">Car</option>
-        <option value="food">Food</option>
-        <option value="entertainment">Entertainment</option>
-        <option value="tax">Tax</option>
-        <option value="electronics">Electronics</option>
-        <option value="gift">Gift</option>
+        <?php
+        foreach($options as $item) {
+     echo "<option value=\"$item[value]\" >$item[innerhtml]</option>";
+        }
+        ?>
+       
     </select>
     <label for="">Amount (Ft)</label>
     <input type="number" min="1" required name="amount">
     <label for="">Date</label>
-    <input type="date" placeholder="dd/mm/yyyy" pattern="(^(((0[1-9]|1[0-9]|2[0-8])[\/](0[1-9]|1[012]))|((29|30|31)[\/](0[13578]|1[02]))|((29|30)[\/](0[4,6,9]|11)))[\/](19|[2-9][0-9])\d\d$)|(^29[\/]02[\/](19|[2-9][0-9])(00|04|08|12|16|20|24|28|32|36|40|44|48|52|56|60|64|68|72|76|80|84|88|92|96)$)" required name="date">
+    <input type="date" placeholder="dd/mm/yyyy"  required name="date">
     <button class="button button-outcome"  name="expenseMoney">Send</button>
 </form>
 </div>
@@ -98,3 +98,5 @@ $total= $db->getTotal();
 <?php 
 include ('includes/footer.php');
 ?>
+</body>
+</html>

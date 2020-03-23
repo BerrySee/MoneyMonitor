@@ -197,7 +197,7 @@ header .change .bar3 {
 header .theme-switch-wrapper {
   position: absolute;
   top: 25%;
-  left: 35vh;
+  left: 250px;
 }
 
 header .theme-switch-wrapper input[type='checkbox'] {

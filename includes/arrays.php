@@ -21,5 +21,34 @@ $navItems  = array (
         'title' => "Statistics"
     ),
     );
+$options = array(
+    array(
+        'value' => 'rent house',
+        'innerhtml'=> 'Rent House',
+    ),
+    array(
+        'value' => 'car',
+        'innerhtml'=> 'Car',
+    ),
+    array(
+        'value' => 'entertainment',
+        'innerhtml'=> 'Entertainment',
+    ),
+    array(
+        'value' => 'tax',
+        'innerhtml'=> 'Tax',
+    ),
+    array(
+        'value' => 'electronics',
+        'innerhtml'=> 'Electronics',
+    ),
+    array(
+        'value' => 'gift',
+        'innerhtml'=> 'Gift',
+    )
+
+    );
+
+
 
 ?>

@@ -1,5 +1,4 @@
 <?php 
-$page = 'index';
 include ('includes/header.php');
 ?>
 <div id=coins></div>
@@ -23,3 +22,6 @@ Get started
 <?php 
 include ('includes/footer.php');
 ?>
+ <script src = "scripts/coin.js"></script>
+</body>
+</html>

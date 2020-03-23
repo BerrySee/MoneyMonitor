@@ -1,14 +1,13 @@
 <?php 
-include ('includes/header.php');
+include('includes/header.php');
+require_once('includes/delete.php');
 require_once('includes/dbconn/db.php');
 $db  = new DB();
 $data = $db->getHistory();
 ?>
 <div class="wallet-container">
 <h1>History</h1>
-<table>
-   
-</table>
+
     
     <div class="history" id="filtered">
 <table>
@@ -26,14 +25,14 @@ $data = $db->getHistory();
         <?php
         foreach($data as $item) {
         ?>
-         <tr  style="<?php  
+         <tr  <?php echo"style=";  
 
     if($item['constant'] == 0 ) {
-        echo "background: rgba(217, 127, 127, 0.7);";
+        echo "\"background: rgba(217, 127, 127, 0.7);\"";
     } else {
-        echo "background: rgba(126, 156, 61, 0.7);";
+        echo "\"background: rgba(126, 156, 61, 0.7);\"";
     }
-    ?>">
+    ?>>
         <td> <?php echo $item['name'] ?></td>
         <td> <?php echo $item['type'] ?></td>
         <td> <?php echo $item['amount'] ?></td>

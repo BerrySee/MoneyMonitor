@@ -50,6 +50,7 @@ header {
       }
     }
   }
+  //expand navbar
   .bars {
     position: absolute;
     right: 2%;
@@ -75,6 +76,7 @@ header {
   .change .bar3 {
     transform: rotate(45deg) translate(-3px, -5px);
   }
+  //dark-light changer
   .theme-switch-wrapper {
     position: absolute;
     top: 25%;
@@ -105,7 +107,7 @@ header {
     }
   }
 }
-
+//each section
 section {
   z-index: -1;
   background-color: var(--section-bg);
@@ -121,7 +123,7 @@ section {
     z-index: -1;
   }
 }
-//Start Page container
+//Start Page (index.php) container
 .start-container {
   padding-top: 2em;
   height: 70%;
@@ -139,26 +141,11 @@ section {
       border-radius: 39px;
       h1 {
         font-family: $fonts;
-        font-weight: 400;
-        font-style: normal;
         font-weight: bold;
         font-size: 2em;
-        line-height: 1.5em;
-        display: flex;
-        align-items: center;
         text-align: center;
-        flex: none;
-        order: 0;
-        align-self: center;
-        margin: 10px 0px;
         color: var(--color);
       }
-    }
-
-    p {
-      text-align: center;
-      align-self: center;
-      flex: none;
     }
   }
   img {
@@ -168,10 +155,34 @@ section {
     filter: var(--hue);
   }
 }
-//actions page
-.universal-container {
-  @include universal-container;
+//get started button
+.get-started {
+  z-index: 2;
+  background: var(--get-started-bg);
+  border: 0px;
+  border-radius: 25px;
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 49px;
+  text-align: center;
+  color: var(--get-started-color);
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  height: 3em;
+  width: 10em;
   transition: all 0.5s ease 0s;
+  &:hover {
+    background-color: var(--get-started-hover-bg);
+    color: var(--main-color);
+  }
+}
+//actions page
+.actions-container {
+  @include actions-container;
+  transition: all 0.5s ease 0s;
+  @include grid;
 }
 .income,
 .outcome,
@@ -253,31 +264,10 @@ table {
   }
 }
 
-.get-started {
-  z-index: 2;
-  background: var(--get-started-bg);
-  border: 0px;
-  border-radius: 25px;
-  font-family: Open Sans;
-  font-weight: 600;
-  font-size: 1.5em;
-  line-height: 49px;
-  text-align: center;
-  color: var(--get-started-color);
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  height: 3em;
-  width: 10em;
-  transition: all 0.5s ease 0s;
-  &:hover {
-    background-color: var(--get-started-hover-bg);
-    color: var(--main-color);
-  }
-}
+
 //wallet page
 .wallet-container {
-  height: 100vh; /* or position:absolute; height:100%; */
+  height: 100vh; 
   @include wallet-container;
   transition: all 0.5s ease 0s;
 
@@ -317,17 +307,7 @@ table {
   overflow: auto;
 }
 
-footer {
-  color: var(--heading-color);
-  z-index: 1;
-  position: absolute;
-  height: 8%;
-  bottom: 0;
-  width: 100%;
-  background: var(--footer-header-bg);
-  display: flex;
-  justify-content: space-around;
-}
+//statistics 
 .chart-container {
   text-align: center;
   display: grid;
@@ -341,6 +321,18 @@ footer {
 .pieChart {
   padding: 1em;
 }
+footer {
+  color: var(--heading-color);
+  z-index: 1;
+  position: absolute;
+  height: 8%;
+  bottom: 0;
+  width: 100%;
+  background: var(--footer-header-bg);
+  display: flex;
+  justify-content: space-around;
+}
+//responsivity
 @media (max-width: 750px) {
   .universal-container {
     grid-template-columns: 1fr 1fr;

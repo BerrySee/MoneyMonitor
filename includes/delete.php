@@ -5,6 +5,6 @@ if(ISSET($_POST['delete'])) {
     $constant = $_POST['constant'];
     $delete = new DB();
     $delete->deleteRow($id, $constant);
-    $delete= null;
+
     header('Location: ../wallet.php');
 }

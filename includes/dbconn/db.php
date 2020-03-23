@@ -11,11 +11,19 @@ public function __construct() {
     //error handling
     try {
         $dsn ="mysql:host=".$this->dbHost. ";dbname=".$this->dbName;
+        // 3 paraméter a DB conn-hoz
         $this->conn = new PDO($dsn, $this->dbUser, $this->dbPassword);
+        /*itt megadhatunk előre attributokat 
+        pl: PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ
+        return the value as OBJ by default*/
     } catch(PDOException $e){
+        //error message 
         die("DB connection failed: ".$e->getMessage());
     } 
 }
+/*methods :1. SQL query 2. prepared statements to avoid SQL injections (there are 2 types I used named params)
+a; prepare
+b; execute*/
 public function incomeMoney($name, $type, $amount, $date) {
     $sql = "INSERT INTO income (name, type, amount, date, constant) VALUES (:name, :type, :amount, :date, 1)";
     $stmt = $this->conn->prepare($sql);
@@ -28,17 +36,6 @@ public function expenseMoney($name, $type, $amount, $date) {
     $stmt->execute(['name'=>$name, 'type'=>$type, 'amount'=>$amount, 'date'=>$date]);
     echo "data inserted";
 }
-public function lastActions() {
-    $sql = "SELECT * FROM income
-UNION
-SELECT * FROM outcome
-ORDER BY Date DESC LIMIT 10";
-    $stmt = $this->conn->prepare($sql);
-    $stmt->execute();
-    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return $data;
-}
-
  public function gettotal() {
     $sql = "SELECT (SELECT SUM(amount) FROM income) - (SELECT SUM(amount) FROM outcome)";
     $stmt = $this->conn->prepare($sql);
@@ -64,7 +61,7 @@ ORDER BY Date DESC";
     ";
     $stmt = $this->conn->prepare($sql);
     $stmt->execute(['id'=>$id, 'constant'=>$constant]);
-    echo "Deleted record";
+    return "Record deleted";
 }
 
 

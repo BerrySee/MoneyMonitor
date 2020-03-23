@@ -10,7 +10,7 @@ include ('includes/arrays.php');
     <title>Money Monitor</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style/style.css?=v3"/>
+    <link rel="stylesheet" href="style/style.css?=v2"/>
      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   </head>
   <body>
@@ -23,9 +23,15 @@ include ('includes/arrays.php');
   </label>
       <nav>
        
-         <?php 
-         include ('includes/nav.php');
-         ?>
+       
+<ul class="nav__links">
+ <?php 
+ foreach($navItems as $item) {
+     echo "<li> <a href =\"$item[slug]\" >$item[title]</a></li>";
+ }
+ 
+ ?>
+</ul>
          
       </nav>
       <div class="bars" id="bar-icon">

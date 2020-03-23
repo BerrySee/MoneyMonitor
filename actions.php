@@ -1,14 +1,14 @@
 <?php 
-include ('includes/header.php');
-include ('includes/arrays.php');
+include('includes/header.php');
+include('includes/arrays.php');
 ?>
 <?php 
 require_once('includes/dbconn/db.php');
-$db= new DB();
-$data= $db->lastActions();
+$db = new DB();
+$data= $db->getHistory();
 $total= $db->getTotal();
 ?>
-<div class="universal-container">
+<div class="actions-container">
 <div class="income">
     <h1>Income</h1>
 <form action="includes/income.php" class="submission-form" method="POST">
@@ -27,7 +27,7 @@ $total= $db->getTotal();
     <label for="">Date</label>
     <input type="date" placeholder="dd/mm/yyyy" required name="date">
 
-    <button class="button button-income" name="incomeMoney">Send</button>
+    <button class="button button-income" name="incomeMoney" type="submit">Send</button>
 </form>
 
 </div>
@@ -43,15 +43,17 @@ $total= $db->getTotal();
 </tr>
 </thead>
 <tbody>
-    <?php foreach ($data as $item) {?>
-    <tr  style="<?php 
+    <?php 
+    
+    foreach (array_slice($data, 0, 10) as $item) {?>
+    <tr  <?php echo "style="; 
 
     if($item['constant'] == 0 ) {
-        echo "background: rgba(217, 127, 127, 0.7);";
+        echo "\"background: rgba(217, 127, 127, 0.7);\"";
     } else {
-        echo "background: rgba(126, 156, 61, 0.7);";
+        echo "\"background: rgba(126, 156, 61, 0.7);\"";
     }
-    ?>" class="record">
+    ?> >
         <td> <?php echo $item['name'] ?></td>
         <td> <?php echo $item['type'] ?></td>
         <td> <?php echo $item['amount'] ?></td>
@@ -61,11 +63,10 @@ $total= $db->getTotal();
 </tbody>
 </table>
 
-<h2>Your total Budget: <?php foreach($total as $money ){
-    if($money < 0|| $money > 0) {
-    echo $money;
-    } else {echo 0;}
-}  ?>  ft</h2>
+<h2>Your total Budget: <?php $money = implode("",$total);
+     echo (number_format($money));
+    
+ ?>  ft</h2>
 </div>
 <div class="outcome">
     <h1>Expense</h1>
@@ -88,7 +89,7 @@ $total= $db->getTotal();
     <input type="number" min="1" required name="amount">
     <label for="">Date</label>
     <input type="date" placeholder="dd/mm/yyyy"  required name="date">
-    <button class="button button-outcome"  name="expenseMoney">Send</button>
+    <button class="button button-outcome"  name="expenseMoney" type="submit">Send</button>
 </form>
 </div>
 

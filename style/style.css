@@ -277,38 +277,10 @@ section #coins {
 
 .start-container .col .welcome h1 {
   font-family: "Assistant", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-weight: bold;
   font-size: 2em;
-  line-height: 1.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
-  -ms-flex-item-align: center;
-      align-self: center;
-  margin: 10px 0px;
   color: var(--color);
-}
-
-.start-container .col p {
-  text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
 }
 
 .start-container img {
@@ -319,7 +291,32 @@ section #coins {
           filter: var(--hue);
 }
 
-.universal-container {
+.get-started {
+  z-index: 2;
+  background: var(--get-started-bg);
+  border: 0px;
+  border-radius: 25px;
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 49px;
+  text-align: center;
+  color: var(--get-started-color);
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  height: 3em;
+  width: 10em;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.get-started:hover {
+  background-color: var(--get-started-hover-bg);
+  color: var(--main-color);
+}
+
+.actions-container {
   height: 90%;
   margin: 0 auto;
   margin-top: 2em;
@@ -333,6 +330,9 @@ section #coins {
   -webkit-box-shadow: 0px 4px 56px var(--shadow-color);
           box-shadow: 0px 4px 56px var(--shadow-color);
   border-radius: 39px;
+  color: var(--color);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -340,9 +340,6 @@ section #coins {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: "income finance finance outcome";
-  color: var(--color);
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
 }
 
 .income,
@@ -459,40 +456,18 @@ table tr {
   width: 100%;
 }
 
-.get-started {
-  z-index: 2;
-  background: var(--get-started-bg);
-  border: 0px;
-  border-radius: 25px;
-  font-family: Open Sans;
-  font-weight: 600;
-  font-size: 1.5em;
-  line-height: 49px;
-  text-align: center;
-  color: var(--get-started-color);
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  height: 3em;
-  width: 10em;
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-}
-
-.get-started:hover {
-  background-color: var(--get-started-hover-bg);
-  color: var(--main-color);
-}
-
 .wallet-container {
   height: 100vh;
-  /* or position:absolute; height:100%; */
-  position: relative;
   height: 90%;
   margin: 0 auto;
   margin-top: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 90%;
   background: var(--column-bg);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-shadow: 0px 4px 56px var(--shadow-color);
           box-shadow: 0px 4px 56px var(--shadow-color);
   border-radius: 39px;
@@ -551,21 +526,6 @@ table tr {
   overflow: auto;
 }
 
-footer {
-  color: var(--heading-color);
-  z-index: 1;
-  position: absolute;
-  height: 8%;
-  bottom: 0;
-  width: 100%;
-  background: var(--footer-header-bg);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 .chart-container {
   text-align: center;
   display: -ms-grid;
@@ -584,6 +544,21 @@ footer {
 
 .pieChart {
   padding: 1em;
+}
+
+footer {
+  color: var(--heading-color);
+  z-index: 1;
+  position: absolute;
+  height: 8%;
+  bottom: 0;
+  width: 100%;
+  background: var(--footer-header-bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media (max-width: 750px) {

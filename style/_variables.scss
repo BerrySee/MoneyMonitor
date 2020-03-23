@@ -33,7 +33,7 @@ $fonts : 'Assistant', sans-serif;
 }
 
 
-@mixin universal-container {
+@mixin actions-container {
    height: 90%;
    margin: 0 auto;
    margin-top: 2em;
@@ -43,25 +43,19 @@ $fonts : 'Assistant', sans-serif;
     box-sizing: border-box;
     box-shadow: 0px 4px 56px var(--shadow-color);
     border-radius: 39px;
-    @include grid;
     color:var(--color);
+    
+    
 }
 @mixin grid {
     display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "income finance finance outcome";
+  
 }
 @mixin wallet-container {
-    position: relative;
-  height: 90%;
-   margin: 0 auto;
-   margin-top: 2em;
-    width: 90%;
-    background: var(--column-bg);
-    box-shadow: 0px 4px 56px var(--shadow-color);
-    border-radius: 39px;
-    color:var(--color);
+   @include actions-container;
     
 }
 @mixin input {

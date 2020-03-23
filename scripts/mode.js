@@ -1,5 +1,6 @@
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const currentTheme = localStorage.getItem("theme");
+//webstorage API
 
 if (currentTheme) {
   document.documentElement.setAttribute("data-theme", currentTheme);
@@ -20,4 +21,3 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener("change", switchTheme, false);
-//not finished!!

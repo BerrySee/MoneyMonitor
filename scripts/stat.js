@@ -1,9 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $.ajax({
-    url: 'includes/stat.php',
-    method: 'GET',
-
-    success: function(data) {
+    url: "includes/stat.php",
+    method: "GET",
+    success: function (data) {
       //át kell konvertálni json objectté
       let jsonObj = JSON.parse(data);
 
@@ -17,30 +16,34 @@ $(document).ready(function() {
       let bgColor = [];
       //total array
       let totalArray = [];
-      let dynamicsColors = function() {
+      let dynamicColors = () => {
         let r = Math.floor(Math.random() * 255);
         let g = Math.floor(Math.random() * 255);
         let b = Math.floor(Math.random() * 255);
-        return 'rgb(' + r + ',' + g + ',' + b + ')';
+        return "rgb(" + r + "," + g + "," + b + ")";
       };
       for (i in expense) {
         thing.push(expense[i].type);
         money.push(expense[i].amount);
-        bgColor.push(dynamicsColors());
+        bgColor.push(dynamicColors());
       }
       for (i in total) {
         totalArray.push(total[i].amount);
       }
 
       let pieChartData = {
-        labels: ['Income', 'Expense'],
+        labels: [
+          "Income", "Expense"
+        ],
         datasets: [
           {
-            label: 'Total Amounts',
-            backgroundColor: ['green', 'red'],
-            borderColor: 'rgba(200, 200, 200, 0.75',
-            hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
-            hoverBorderColor: 'rgba(200, 200, 200, 1)',
+            label: "Total Amounts",
+            backgroundColor: [
+              "green", "red"
+            ],
+            borderColor: "rgba(200, 200, 200, 0.75",
+            hoverBackgroundColor: "rgba(200, 200, 200, 1)",
+            hoverBorderColor: "rgba(200, 200, 200, 1)",
             data: totalArray
           }
         ]
@@ -49,18 +52,18 @@ $(document).ready(function() {
         labels: thing,
         datasets: [
           {
-            label: 'Total Amounts',
+            label: "Total Amounts",
             backgroundColor: bgColor,
-            borderColor: 'rgba(200, 200, 200, 0.75',
-            hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
-            hoverBorderColor: 'rgba(200, 200, 200, 1)',
+            borderColor: "rgba(200, 200, 200, 0.75",
+            hoverBackgroundColor: "rgba(200, 200, 200, 1)",
+            hoverBorderColor: "rgba(200, 200, 200, 1)",
             data: money
           }
         ]
       };
-      let chartOne = document.getElementById('barChart').getContext('2d');
+      let chartOne = document.getElementById("barChart").getContext("2d");
       new Chart(chartOne, {
-        type: 'bar',
+        type: "bar",
         data: barChartData,
         responsive: true,
         maintainAspectRatio: false,
@@ -70,15 +73,15 @@ $(document).ready(function() {
           }
         }
       });
-      let chartTwo = document.getElementById('pieChart').getContext('2d');
+      let chartTwo = document.getElementById("pieChart").getContext("2d");
       new Chart(chartTwo, {
-        type: 'pie',
+        type: "pie",
         data: pieChartData,
         responsive: true,
         maintainAspectRatio: false
       });
     },
-    error: function(data) {
+    error: function (data) {
       console.log(data);
     }
   });

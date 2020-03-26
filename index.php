@@ -1,5 +1,5 @@
 <?php 
-include ('includes/header.php');
+include('includes/header.php');
 ?>
 <div id=coins></div>
 <div class="start-container">
@@ -22,6 +22,6 @@ Get started
 <?php 
 include ('includes/footer.php');
 ?>
- <script src = "scripts/coin.js"></script>
+ <script src="scripts/coins.js"></script>
 </body>
 </html>

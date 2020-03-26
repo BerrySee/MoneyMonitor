@@ -80,7 +80,7 @@ header {
   .theme-switch-wrapper {
     position: absolute;
     top: 25%;
-    left: 250px;
+    left: 200px;
     input[type='checkbox'] {
       width: 40px;
       height: 20px;
@@ -116,6 +116,10 @@ section {
   height: 85vh;
   width: 100%;
   #coins {
+    img {
+ @include coins;
+    } 
+   
     position: absolute;
     top: 0;
     width: 100%;
@@ -334,7 +338,7 @@ footer {
 }
 //responsivity
 @media (max-width: 750px) {
-  .universal-container {
+  .actions-container {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'income outcome' !important;
   }
@@ -349,6 +353,7 @@ footer {
   }
   nav {
     .responsive {
+      z-index: -1;
       transition: all 0.5s ease 0s;
       background-color: var(--footer-header-bg);
       position: absolute;

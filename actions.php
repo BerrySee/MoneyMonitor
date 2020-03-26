@@ -21,6 +21,7 @@ $total= $db->getTotal();
     <select name="type" required>
         <option value="Salary" >Salary</option>
         <option value="Gift" >Gift</option>
+        <option value="Other" >Other</option>
     </select>
     <label for="">Amount (Ft)</label>
     <input type="number" min="1" name="amount" required>
@@ -56,7 +57,7 @@ $total= $db->getTotal();
     ?> >
         <td> <?php echo $item['name'] ?></td>
         <td> <?php echo $item['type'] ?></td>
-        <td> <?php echo $item['amount'] ?></td>
+        <td> <?php echo number_format($item['amount']) ?></td>
         <td> <?php echo $item['date'] ?></td>
     </tr>
     <?php } ?>
@@ -64,7 +65,9 @@ $total= $db->getTotal();
 </table>
 
 <h2>Your total Budget: <?php $money = implode("",$total);
+if($money != 0)
      echo (number_format($money));
+     else echo 0;
     
  ?>  ft</h2>
 </div>

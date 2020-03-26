@@ -23,8 +23,8 @@ $navItems  = array (
     );
 $options = array(
     array(
-        'value' => 'rent house',
-        'innerhtml'=> 'Rent House',
+        'value' => 'home',
+        'innerhtml'=> 'Home',
     ),
     array(
         'value' => 'car',
@@ -45,6 +45,34 @@ $options = array(
     array(
         'value' => 'gift',
         'innerhtml'=> 'Gift',
+    ),
+    array(
+        'value'=>'cash',
+        'innerhtml'=>'Cash Debit'
+    ),
+     array(
+        'value'=>'education',
+        'innerhtml'=>'Education'
+     ),
+      array(
+        'value'=>'groceries',
+        'innerhtml'=>'Groceries'
+      ),
+       array(
+        'value'=>'tobacco',
+        'innerhtml'=>'Tobacco'
+       ),
+        array(
+        'value'=>'clothing',
+        'innerhtml'=>'Clothing'
+        ),
+         array(
+        'value'=>'saving',
+        'innerhtml'=>'Savings'
+         ),
+         array(
+        'value'=>'telephone',
+        'innerhtml'=>'Telephone'
     )
 
     );

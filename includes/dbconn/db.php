@@ -3,7 +3,7 @@ class DB {
     //db connection variables
 private $dbHost = "localhost";
 private $dbUser = "root";
-private $dbPassword = "gizike94";
+private $dbPassword = "nincsjelszo";
 private $dbName ="finance";
 private $conn;
 

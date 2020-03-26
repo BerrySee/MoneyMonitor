@@ -1,3 +1,4 @@
+@import 'animation.scss';
 $fonts : 'Assistant', sans-serif; 
 
 :root { //root pseudo class a lightmode-hoz
@@ -66,3 +67,14 @@ $fonts : 'Assistant', sans-serif;
     color: var(--main-color);
     width: 100%;
 }
+/* coins animation in progress
+@mixin coins {
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      left: #{$i * 5}px;
+      position: absolute;
+      width: random(60)+20px;
+      animation: coins random(10)+5s linear infinite;
+    }
+  }
+}*/

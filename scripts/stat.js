@@ -9,7 +9,7 @@ $(document).ready(function () {
       //return jsonObj;
       let expense = jsonObj[0];
       let total = jsonObj[1];
-
+      console.log(expense);
       //expense arrays
       let thing = [];
       let money = [];

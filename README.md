@@ -14,7 +14,7 @@ put the downloaded files to your htdocs
 localhost:8080
 ```
 
-### Login to your myadmin interface
+## Login to your myadmin interface
 
 ## Import the given sql file
 
